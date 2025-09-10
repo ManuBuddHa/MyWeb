@@ -9,9 +9,9 @@ letter-spacing: .2em;
     font-weight: bold;
     font-size: 4em; /* Default font size */
 }
-@media (max-width: 350px) {
+@media (max-width: 620px) {
     .myName {
-        font-size: 1em;
+        font-size: 2em;
     }
     #roles {
         font-size: 0.7em;
@@ -20,6 +20,12 @@ letter-spacing: .2em;
         font-size: 0.7em;
     }
 }
+@media (max-width: 360px) {
+    .myName {
+        font-size: 1.5em;
+    }
+}
+
 .blueLink{
 transition: text-shadow 0.3s ease, color 0.3s ease;
 }
@@ -37,6 +43,6 @@ text-shadow: 0 0 5px #ff00f0,
              0 0 10px #ff00f0,
              0 0 20px #ff00f0;
 }
-.text{
+.custom-indent{
   text-indent: 4em;
 }
