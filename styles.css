@@ -11,7 +11,7 @@ letter-spacing: .2em;
 }
 @media (max-width: 350px) {
     .myName {
-        font-size: 1.5em;
+        font-size: 1em;
     }
     #roles {
         font-size: 0.7em;
