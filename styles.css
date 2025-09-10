@@ -1,1 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+#roles{
+font-family: 'Courier New', Courier, monospace;
+font-weight: bold;
+letter-spacing: .2em;
+}
+.myName{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+.blueLink{
+transition: text-shadow 0.3s ease, color 0.3s ease;
+}
+
+.blueLink:hover{
+color: #ffffff;
+text-shadow: 0 0 5px #8ff195,
+             0 0 10px #249705e8,
+             0 0 20px #52da50f6;
+}
+.blueLink:focus, .blueLink:active{
+outline: none;
+color: #ffffff;
+text-shadow: 0 0 5px #ff00f0,
+             0 0 10px #ff00f0,
+             0 0 20px #ff00f0;
+}

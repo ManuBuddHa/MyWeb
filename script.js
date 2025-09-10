@@ -1,16 +1,26 @@
-function image(){
-   const button=document.querySelector("button")
-   const imgContainer = document.querySelector(".imgContainer");
-   if(imgContainer.style.display==="none"){
-      imgContainer.style.display="block";
-      button.style.backgroundColor="white";
-      button.style.color="red";
-      button.style.boxShadow=".1em .1em 1vw black";
-   }
-   else{
-      imgContainer.style.display="none";
-      button.style.backgroundColor="rgb(11, 190, 11)";
-      button.style.color="antiquewhite";
-      button.style.boxShadow="0 0 1em lime";
+let i = 0;
+const txt = ['PROGRAMMER','WEB DEVELOPER','UI DESIGNER','PYTHON DEVELOPER','CREATIVE MIND'];
+const speed = 100;
+function typeWriter() {
+   if (i < txt.length) {
+      let j = 0;
+      function type() {
+         if (j < txt[i].length) {
+            document.getElementById("roles").innerHTML += txt[i].charAt(j);
+            j++;
+            setTimeout(type, speed);
+         } else {
+            setTimeout(() => {
+               document.getElementById("roles").innerHTML = "";
+               i++;
+               typeWriter();
+            }, 1000);
+         }
+      }
+      type();
+   } else {
+      i = 0;
+      typeWriter();
    }
 }
+typeWriter();
