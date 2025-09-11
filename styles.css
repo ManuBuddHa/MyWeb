@@ -20,14 +20,16 @@ letter-spacing: .2em;
         font-size: 0.7em;
     }
 }
-@media (max-width: 360px) {
-    .myName {
-        font-size: 1.5em;
-    }
+.custom-indent{
+  text-indent: 4em;
+  text-align: justify;
+  font-size: 1.5em;
 }
-
 .blueLink{
 transition: text-shadow 0.3s ease, color 0.3s ease;
+font-size: 1.5em;
+color: #171717;
+text-decoration: none;
 }
 
 .blueLink:hover{
@@ -43,6 +45,22 @@ text-shadow: 0 0 5px #ff00f0,
              0 0 10px #ff00f0,
              0 0 20px #ff00f0;
 }
-.custom-indent{
-  text-indent: 4em;
+.navbar-nav{
+    display: flex;
+    gap: 3em;
+}
+@media (max-width: 360px) {
+    .myName {
+        font-size: 1.5em;
+    }
+    .custom-indent{
+        text-align: justify;
+        font-size: 1em;
+    }
+}
+@media (max-width: 767.5px) {
+    .blueLink{
+        font-size: 0.8em;
+        margin-top: 10px;
+    }
 }
