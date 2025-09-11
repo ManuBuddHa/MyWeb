@@ -1,4 +1,3 @@
-# Portfoliowebsite
+# Portfolio website
 My Personal Website
-Testing Responsiveness Now,
-Uses HTML,CSS,Bootstrap currently.
+Uses HTML,CSS,Bootstrap and JavaScript.
