@@ -1,29 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: "Montserrat", sans-serif;
     color: white;
+}
+
+.container {
+    margin: auto;
 }
 
 .body_img {
     height: 100vh;
+    width: 100vw;
     background: url("./img/bg.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    overflow-y: scroll;
+    position: fixed;
     z-index: -1;
 }
 
 header {
-    height: 30%;
+    height: 20vh;
     width: 85%;
     margin: auto;
     display: flex;
-    background: url("./img/myimage1.jpg");
+    /* background: url("./img/myimage1.jpg");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
     border-radius: 0 0 20px 20px;
 }
 
@@ -38,6 +46,14 @@ header {
 
 h1 {
     font-size: 250%;
+    font-family: "Playfair Display", serif;
+}
+
+.myname {
+    color: white;
+    text-shadow: 1px 1px 5px #007bff;
+    font-size: 3em;
+    font-family: Montserrat;
 }
 
 h4 {
@@ -65,6 +81,7 @@ nav {
     width: 100%;
     display: flex;
     justify-content: end;
+    z-index: 10;
 }
 
 .navbar ul {
@@ -74,14 +91,15 @@ nav {
     align-items: center;
     height: 100%;
     width: 75%;
-    font-size: 120%;
+    font-size: 1.5em;
     text-shadow: 0 0 5px cyan;
+    list-style: none;
 }
 
 .navbar a {
     text-decoration: none;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    text-shadow: 2px 2px 2px black ;
+    font-family: Roboto;
+    text-shadow: 2px 2px 2px black;
 }
 
 section {
@@ -94,13 +112,22 @@ section {
 section div {
     padding: 2%;
 }
-#about{
+
+#about {
     padding: 1%;
+    height: 70vh;
 }
 
-section h1 {
-    font-size: 300%;
+.sectionheading {
+    font-size: 4.5em;
     text-shadow: 0 0 5px cyan;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+.sectionheading.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 #education,
@@ -112,8 +139,8 @@ section h1 {
 }
 
 #education ul {
-    font-size: 120%;
-    line-height: 180%;
+    font-size: 1.4em;
+    line-height: 2;
     margin: 2%;
     text-align: left;
 }
@@ -123,14 +150,27 @@ section h1 {
     border-bottom: 5px solid red;
 }
 
-p {
-    line-height: 150%;
-    text-indent: 15%;
+#about p {
+    line-height: 2;
+    text-indent: 5em;
     text-align: justify;
     margin: 2%;
     width: 95%;
-    font-size: 130%;
+    font-size: 1.3em;
+    color: transparent;
+    background: linear-gradient(60deg,rgb(39, 185, 10),rgb(227, 243, 0));
+    background-clip: text;
 }
+li{
+    color: white;
+}
+
+span {
+    color: rgb(255, 255, 0);
+    font-weight: 400;
+    font-family: Roboto;
+}
+
 #projects {
     height: 100vh;
 }
@@ -181,22 +221,50 @@ footer {
     padding: 1%;
 }
 
-.social{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(4,1fr);
+.social {
+    display: flex;
+    flex-direction: column;
     background-color: rgba(255, 255, 255, 0.603);
-    gap: 10%;
-    border-radius: 20px 0 0 20px;
-    width: 2%;
-    height: 25%;
+    gap: 10px;
+    border-radius: 12px 0 0 12px;
+    width: fit-content;
+    height: fit-content;
     position: fixed;
     right: 0;
     top: 50%;
 }
+
 .social i {
     width: 90%;
     border-radius: 100%;
     text-shadow: 2px 2px 5px rgb(150, 7, 155);
     font-size: 200%;
+}
+
+.cursor {
+    color: #007bff;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+#role {
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(255, 255, 0);
+    font-weight: 400;
+}
+
+#typewriter-container {
+    font-size: 1.2em;
+    font-weight: 200;
 }
