@@ -31,8 +31,8 @@ header {
     /* background: url("./img/myimage1.jpg");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover; */
-    border-radius: 0 0 20px 20px;
+    background-size: cover; 
+    border-radius: 0 0 20px 20px; */
 }
 
 .profile {
@@ -44,20 +44,11 @@ header {
     padding-left: 1%;
 }
 
-h1 {
-    font-size: 250%;
-    font-family: "Playfair Display", serif;
-}
-
 .myname {
     color: white;
     text-shadow: 1px 1px 5px #007bff;
     font-size: 3em;
     font-family: Montserrat;
-}
-
-h4 {
-    font-size: 100%;
 }
 
 .profile span {
@@ -267,4 +258,31 @@ footer {
 #typewriter-container {
     font-size: 1.2em;
     font-weight: 200;
+}
+.hamburger {
+    width: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+.hamburger span {
+    display: block;
+    height: 3px;
+    background: white;
+    margin: 6px 0;
+    transition: 0.3s;
+}
+
+/* Animation */
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
 }

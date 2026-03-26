@@ -1,0 +1,50 @@
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    nav {
+        position: absolute;
+        top: 62px;
+        right: 0;
+        width: 50%;
+        background: #444;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    nav.active {
+        height: 300px;
+        max-height: 300px;
+    }
+}
+
+@media screen and (max-width:425px) {
+    .container {
+        max-width: 320px;
+        margin: auto;
+    }
+
+    .header {
+        height: 12vh;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .profile {
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .myname{
+        font-size: 1.5em;
+    }
+}

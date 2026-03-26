@@ -56,3 +56,10 @@ const targets = document.querySelectorAll('.sectionheading');
 targets.forEach((el)=>{
   observer.observe(el);
 });
+
+let hamburger = document.getElementById('hamburger');
+let navmenu = document.getElementById('navmenu');
+hamburger.addEventListener('click',()=>{
+    hamburger.classList.toggle('active');
+    navmenu.classList.toggle('active');
+});;
